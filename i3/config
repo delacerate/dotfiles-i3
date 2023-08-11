@@ -286,8 +286,11 @@ bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
-bindsym $mod+Shift+g layout tabbed
+bindsym $mod+g layout tabbed
 bindsym $mod+e layout toggle split
+
+#change wallpaper
+bindsym $mod+Shift+w exec ~/.scripts/change_wallpaper.sh
 
 # toggle tiling / floating
 bindsym $mod+space floating toggle

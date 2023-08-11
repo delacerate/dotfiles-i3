@@ -20,4 +20,4 @@ exec --no-startup-id /usr/bin/gnome-keyring-daemon --start --components=pkcs11,s
 
 # Set wallpaper AFTER compositor.
 # feh --bg-fill ~/.wallpapers/IGN_Astronaut_Nord.png
-feh --bg-fill ~/.wallpaper/wallpaper0.png
+feh --bg-fill ~/.wallpaper/wall.png

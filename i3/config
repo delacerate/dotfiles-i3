@@ -219,7 +219,7 @@ bindsym $mod+n exec kitty --class neovim --execute nvim
 bindsym $mod+b exec kitty --config ~/.config/kitty/padding.conf --execute btop 
 
 # Dotfiles.
-bindsym $mod+g exec kitty --config ~/.config/kitty/padding.conf --execute lazygit-dotfiles
+#bindsym $mod+g exec kitty --config ~/.config/kitty/padding.conf --execute lazygit-dotfiles
 
 # kill focused window
 bindsym $mod+q kill

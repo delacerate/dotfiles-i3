@@ -1,4 +1,4 @@
-# This file is a modified version based on default i3-config-wizard config
+#his file is a modified version based on default i3-config-wizard config
 # source is available here:
 # https://raw.githubusercontent.com/endeavouros-team/endeavouros-i3wm-setup/master/.config/i3/config
 # Maintainer: joekamprad [joekamprad@endeavouros.com]
@@ -179,7 +179,7 @@ bindcode $mod+Shift+81 	 move container to workspace  $ws9
 bindcode $mod+Shift+90 	 move container to workspace  $ws10
 
 # resize window (you can also use the mouse for that):
-#mode "resize" {
+mode "resize" {
 # Pressing left will shrink the window's width.
 # Pressing right will grow the window's width.
 # Pressing up will shrink the window's height.
@@ -190,18 +190,19 @@ bindcode $mod+Shift+90 	 move container to workspace  $ws10
        # bindsym ntilde resize grow width 10 px or 10 ppt
 
 # same bindings, but for the arrow keys
-#	bindsym Left resize shrink width 10 px or 10 ppt
-#        bindsym Down resize grow height 10 px or 10 ppt
-#        bindsym Up resize shrink height 10 px or 10 ppt
-#        bindsym Right resize grow width 10 px or 10 ppt
+      	bindsym Mod1+h resize shrink width 1 px or 1 ppt
+        bindsym Mod1+j resize grow height 1 px or 1 ppt
+        bindsym Mod1+k resize shrink height 1 px or 1 ppt
+        bindsym Mod1+l resize grow width 1 px or 1 ppt
 
 # back to normal: Enter or Escape
-#	bindsym Return mode "default"
-#        bindsym Escape mode "default"
-#}
+# bindsym Return mode "default"
+bindsym $mod+Shift+z mode "default"
 
-bindsym $mod+Mod1+r mode "resize"
 
+}
+
+bindsym $mod+Shift+x mode "resize"
 ######################################
 # keybindings for different actions: #
 ######################################
@@ -390,7 +391,7 @@ exec --no-startup-id dex --autostart --environment i3
 #exec_always --no-startup-id conky
 
 # set powersavings for display:
-exec --no-startup-id xset s 480 dpms 600 600 600
+exec --no-startup-id xset s 480 dpms 250 600 600
 
 # disable power saving (for example if using xscreensaver)
 #exec --no-startup-id xset -dpms
@@ -482,8 +483,9 @@ bindsym Mod1+Tab exec /home/delacerate/.config/rofi/switcher/run.sh
 # Startup scripts: #
 ####################
 
-exec ~/.scripts/startup.sh
+exec --no-startup-id xrandr --output eDP-1 --mode 1920x1080 --pos 0x768 --primary --rotate normal --output HDMI-1 --mode 1366x768 --pos 0x0 --rotate normal
 
+exec ~/.scripts/startup.sh
 ##############
 # Screenshot #
 ##############
